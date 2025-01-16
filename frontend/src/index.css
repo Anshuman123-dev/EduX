@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body {
+    overflow-x: hidden;
+}
+
+/* index.css */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #1e3a8a; /* Example primary color for day mode */
+    --secondary-color: #2563eb;
+  }
+  
+  .dark {
+    --background-color: #1a202c;
+    --text-color: #e2e8f0;
+    --primary-color: #4299e1; /* Example primary color for night mode */
+    --secondary-color: #63b3ed;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
