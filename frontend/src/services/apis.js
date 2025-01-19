@@ -1,4 +1,4 @@
-const BASE_URL = "https://edux-backend-a07m.onrender.com"
+const BASE_URL = "https://edux-backend-a07m.onrender.com/api/v1"
 
 // AUTH ENDPOINTS
 export const endpoints = {
