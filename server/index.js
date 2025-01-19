@@ -23,10 +23,15 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin:"https://edu-x-puce.vercel.app/",
-		credentials:true,
+	  origin: "https://edu-x-puce.vercel.app", // Removed trailing slash
+	  credentials: true, // Allows cookies and credentials
+	  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // Specify allowed HTTP methods
+	  allowedHeaders: ['Content-Type', 'Authorization'], // Specify allowed headers
 	})
-)
+  );
+  
+  // Handle preflight requests explicitly
+  app.options('*', cors());
 
 app.use(
 	fileUpload({
